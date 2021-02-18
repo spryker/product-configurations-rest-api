@@ -7,12 +7,10 @@
 
 namespace Spryker\Glue\ProductConfigurationsRestApi\Processor\Mapper;
 
-use Generated\Shared\Transfer\ItemTransfer;
 use Generated\Shared\Transfer\ProductConfigurationInstanceTransfer;
 use Generated\Shared\Transfer\RestCartItemProductConfigurationInstanceAttributesTransfer;
-use Generated\Shared\Transfer\RestItemsAttributesTransfer;
 
-interface ProductConfigurationInstanceMapperInterface
+interface RestCartItemProductConfigurationInstancePriceProductVolumeMapperInterface
 {
     /**
      * @param \Generated\Shared\Transfer\RestCartItemProductConfigurationInstanceAttributesTransfer $restCartItemProductConfigurationInstanceAttributesTransfer
@@ -20,19 +18,8 @@ interface ProductConfigurationInstanceMapperInterface
      *
      * @return \Generated\Shared\Transfer\ProductConfigurationInstanceTransfer
      */
-    public function mapRestCartItemProductConfigurationToProductConfigurationInstanceTransfer(
+    public function mapRestCartItemProductConfigurationInstanceAttributesToProductConfigurationInstanceTransfer(
         RestCartItemProductConfigurationInstanceAttributesTransfer $restCartItemProductConfigurationInstanceAttributesTransfer,
         ProductConfigurationInstanceTransfer $productConfigurationInstanceTransfer
     ): ProductConfigurationInstanceTransfer;
-
-    /**
-     * @param \Generated\Shared\Transfer\ItemTransfer $itemTransfer
-     * @param \Generated\Shared\Transfer\RestItemsAttributesTransfer $restItemsAttributesTransfer
-     *
-     * @return \Generated\Shared\Transfer\RestItemsAttributesTransfer
-     */
-    public function mapItemTransferToRestItemsAttributesTransfer(
-        ItemTransfer $itemTransfer,
-        RestItemsAttributesTransfer $restItemsAttributesTransfer
-    ): RestItemsAttributesTransfer;
 }
