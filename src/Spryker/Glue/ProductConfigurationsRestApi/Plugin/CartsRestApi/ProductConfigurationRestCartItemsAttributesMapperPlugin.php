@@ -20,7 +20,7 @@ class ProductConfigurationRestCartItemsAttributesMapperPlugin extends AbstractPl
     /**
      * {@inheritDoc}
      * - Maps `ItemTransfer` product configuration to `RestItemsAttributesTransfer`.
-     * - Executes `RestCartItemProductConfigurationMapperPluginInterface` plugin stack.
+     * - Executes `\Spryker\Glue\ProductConfigurationsRestApiExtension\Dependency\Plugin\RestProductConfigurationPriceMapperPluginInterface` plugin stack.
      *
      * @api
      *
