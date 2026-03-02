@@ -11,11 +11,6 @@ use Generated\Shared\Transfer\ConcreteProductsRestAttributesTransfer;
 
 interface ProductConfigurationProductConcreteExpanderInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ConcreteProductsRestAttributesTransfer $concreteProductsRestAttributesTransfer
-     *
-     * @return \Generated\Shared\Transfer\ConcreteProductsRestAttributesTransfer
-     */
     public function expandWithProductConfigurationInstance(
         ConcreteProductsRestAttributesTransfer $concreteProductsRestAttributesTransfer
     ): ConcreteProductsRestAttributesTransfer;

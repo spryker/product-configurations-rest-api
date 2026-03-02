@@ -31,9 +31,6 @@ class ProductConfigurationCartItemExpanderPluginTest extends Unit
      */
     protected const TEST_SKU = 'test-sku';
 
-    /**
-     * @return void
-     */
     public function testExpandWillExpandCartItemRequestTransferWithProductConfigurationData(): void
     {
         // Arrange

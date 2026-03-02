@@ -36,9 +36,6 @@ class ProductConfigurationRestCartItemsAttributesMapperPluginTest extends Unit
      */
     protected const TEST_LOCALE = 'en_US';
 
-    /**
-     * @return void
-     */
     public function testMapItemTransferToRestItemsAttributesTransferWillMapProductConfigurationData(): void
     {
         // Arrange

@@ -38,9 +38,6 @@ class ProductConfigurationsRestApiFacadeTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testMapCartItemRequestTransferToPersistentCartChangeTransfer(): void
     {
         // Arrange
@@ -70,12 +67,6 @@ class ProductConfigurationsRestApiFacadeTest extends Unit
         );
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\PersistentCartChangeTransfer $persistentCartChangeTransfer
-     * @param string $sku
-     *
-     * @return \Generated\Shared\Transfer\ItemTransfer|null
-     */
     protected function extractItemTransferBySku(PersistentCartChangeTransfer $persistentCartChangeTransfer, string $sku): ?ItemTransfer
     {
         foreach ($persistentCartChangeTransfer->getItems() as $itemTransfer) {

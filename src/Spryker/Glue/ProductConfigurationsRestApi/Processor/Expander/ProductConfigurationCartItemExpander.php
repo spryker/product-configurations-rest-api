@@ -28,10 +28,6 @@ class ProductConfigurationCartItemExpander implements ProductConfigurationCartIt
      */
     protected ProductConfigurationsRestApiToProductConfigurationStorageClientInterface $productConfigurationStorageClient;
 
-    /**
-     * @param \Spryker\Glue\ProductConfigurationsRestApi\Processor\Mapper\ProductConfigurationInstanceMapperInterface $productConfigurationInstanceMapper
-     * @param \Spryker\Glue\ProductConfigurationsRestApi\Dependency\Client\ProductConfigurationsRestApiToProductConfigurationStorageClientInterface $productConfigurationStorageClient
-     */
     public function __construct(
         ProductConfigurationInstanceMapperInterface $productConfigurationInstanceMapper,
         ProductConfigurationsRestApiToProductConfigurationStorageClientInterface $productConfigurationStorageClient
@@ -40,12 +36,6 @@ class ProductConfigurationCartItemExpander implements ProductConfigurationCartIt
         $this->productConfigurationStorageClient = $productConfigurationStorageClient;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CartItemRequestTransfer $cartItemRequestTransfer
-     * @param \Generated\Shared\Transfer\RestCartItemsAttributesTransfer $restCartItemsAttributesTransfer
-     *
-     * @return \Generated\Shared\Transfer\CartItemRequestTransfer
-     */
     public function expandWithProductConfigurationInstance(
         CartItemRequestTransfer $cartItemRequestTransfer,
         RestCartItemsAttributesTransfer $restCartItemsAttributesTransfer
@@ -67,11 +57,6 @@ class ProductConfigurationCartItemExpander implements ProductConfigurationCartIt
         return $cartItemRequestTransfer->setProductConfigurationInstance($productConfigurationInstanceTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CartItemRequestTransfer $cartItemRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductConfigurationInstanceTransfer|null
-     */
     protected function findProductConfigurationInstance(
         CartItemRequestTransfer $cartItemRequestTransfer
     ): ?ProductConfigurationInstanceTransfer {
@@ -86,11 +71,6 @@ class ProductConfigurationCartItemExpander implements ProductConfigurationCartIt
             ->current();
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CartItemRequestTransfer $cartItemRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductConfigurationInstanceCollectionTransfer
-     */
     protected function getProductConfigurationInstanceCollection(
         CartItemRequestTransfer $cartItemRequestTransfer
     ): ProductConfigurationInstanceCollectionTransfer {

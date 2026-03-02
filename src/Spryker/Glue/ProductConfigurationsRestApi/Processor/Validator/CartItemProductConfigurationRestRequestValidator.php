@@ -57,20 +57,11 @@ class CartItemProductConfigurationRestRequestValidator implements CartItemProduc
      */
     protected ProductConfigurationsRestApiToProductConfigurationStorageClientInterface $productConfigurationStorageClient;
 
-    /**
-     * @param \Spryker\Glue\ProductConfigurationsRestApi\Dependency\Client\ProductConfigurationsRestApiToProductConfigurationStorageClientInterface $productConfigurationStorageClient
-     */
     public function __construct(ProductConfigurationsRestApiToProductConfigurationStorageClientInterface $productConfigurationStorageClient)
     {
         $this->productConfigurationStorageClient = $productConfigurationStorageClient;
     }
 
-    /**
-     * @param \Symfony\Component\HttpFoundation\Request $httpRequest
-     * @param \Spryker\Glue\GlueApplication\Rest\Request\Data\RestRequestInterface $restRequest
-     *
-     * @return \Generated\Shared\Transfer\RestErrorCollectionTransfer|null
-     */
     public function validate(Request $httpRequest, RestRequestInterface $restRequest): ?RestErrorCollectionTransfer
     {
         if (
@@ -107,11 +98,6 @@ class CartItemProductConfigurationRestRequestValidator implements CartItemProduc
             ));
     }
 
-    /**
-     * @param string $productConcreteSku
-     *
-     * @return \Generated\Shared\Transfer\ProductConfigurationInstanceTransfer|null
-     */
     protected function findProductConfigurationInstance(
         string $productConcreteSku
     ): ?ProductConfigurationInstanceTransfer {
@@ -126,11 +112,6 @@ class CartItemProductConfigurationRestRequestValidator implements CartItemProduc
             ->current();
     }
 
-    /**
-     * @param string $productConcreteSku
-     *
-     * @return \Generated\Shared\Transfer\ProductConfigurationInstanceCollectionTransfer
-     */
     protected function getProductConfigurationInstanceCollection(
         string $productConcreteSku
     ): ProductConfigurationInstanceCollectionTransfer {
@@ -144,23 +125,11 @@ class CartItemProductConfigurationRestRequestValidator implements CartItemProduc
             ->getProductConfigurationInstanceCollection($productConfigurationInstanceCriteriaTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\RestCartItemsAttributesTransfer $restCartItemsAttributesTransfer
-     * @param \Spryker\Glue\GlueApplication\Rest\Request\Data\RestRequestInterface $restRequest
-     *
-     * @return string|null
-     */
     protected function resolveProductConcreteSku(RestCartItemsAttributesTransfer $restCartItemsAttributesTransfer, RestRequestInterface $restRequest): ?string
     {
         return $restCartItemsAttributesTransfer->getSku() ?? $restRequest->getResource()->getId();
     }
 
-    /**
-     * @param string $sku
-     * @param string|null $productConfigurationInstanceKey
-     *
-     * @return \Generated\Shared\Transfer\RestErrorMessageTransfer
-     */
     protected function createErrorMessageTransfer(string $sku, ?string $productConfigurationInstanceKey): RestErrorMessageTransfer
     {
         return (new RestErrorMessageTransfer())
@@ -173,12 +142,6 @@ class CartItemProductConfigurationRestRequestValidator implements CartItemProduc
             ));
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\RestCartItemProductConfigurationInstanceAttributesTransfer $restCartItemProductConfigurationInstanceAttributesTransfer
-     * @param \Generated\Shared\Transfer\ProductConfigurationInstanceTransfer|null $productConfigurationInstanceTransfer
-     *
-     * @return bool
-     */
     protected function isSameProductConfigurationInstance(
         RestCartItemProductConfigurationInstanceAttributesTransfer $restCartItemProductConfigurationInstanceAttributesTransfer,
         ?ProductConfigurationInstanceTransfer $productConfigurationInstanceTransfer

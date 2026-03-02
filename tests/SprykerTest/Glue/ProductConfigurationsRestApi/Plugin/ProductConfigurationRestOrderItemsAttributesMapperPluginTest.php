@@ -24,9 +24,6 @@ use Spryker\Glue\ProductConfigurationsRestApi\Plugin\OrdersRestApi\ProductConfig
  */
 class ProductConfigurationRestOrderItemsAttributesMapperPluginTest extends Unit
 {
-    /**
-     * @return void
-     */
     public function testMapItemTransferToRestOrderItemsAttributesTransferWillMapProductConfiguration(): void
     {
         // Arrange
@@ -54,9 +51,6 @@ class ProductConfigurationRestOrderItemsAttributesMapperPluginTest extends Unit
         $this->assertSame($restSalesOrderItemProductConfigurationInstanceAttributesTransfer->getDisplayData(), $productConfigurationInstanceTransfer->getDisplayData());
     }
 
-    /**
-     * @return void
-     */
     public function testMapItemTransferToRestOrderItemsAttributesTransferWillNotMapProductConfigurationWhenItIsAbsentInItem(): void
     {
         // Arrange

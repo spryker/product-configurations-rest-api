@@ -19,9 +19,6 @@ class ItemComparator implements ItemComparatorInterface
      */
     protected $productConfigurationsRestApiConfig;
 
-    /**
-     * @param \Spryker\Zed\ProductConfigurationsRestApi\ProductConfigurationsRestApiConfig $productConfigurationsRestApiConfig
-     */
     public function __construct(ProductConfigurationsRestApiConfig $productConfigurationsRestApiConfig)
     {
         $this->productConfigurationsRestApiConfig = $productConfigurationsRestApiConfig;

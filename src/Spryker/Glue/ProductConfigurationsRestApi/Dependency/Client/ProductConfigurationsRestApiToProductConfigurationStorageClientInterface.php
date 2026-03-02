@@ -12,11 +12,6 @@ use Generated\Shared\Transfer\ProductConfigurationInstanceCriteriaTransfer;
 
 interface ProductConfigurationsRestApiToProductConfigurationStorageClientInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ProductConfigurationInstanceCriteriaTransfer $productConfigurationInstanceCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductConfigurationInstanceCollectionTransfer
-     */
     public function getProductConfigurationInstanceCollection(
         ProductConfigurationInstanceCriteriaTransfer $productConfigurationInstanceCriteriaTransfer
     ): ProductConfigurationInstanceCollectionTransfer;

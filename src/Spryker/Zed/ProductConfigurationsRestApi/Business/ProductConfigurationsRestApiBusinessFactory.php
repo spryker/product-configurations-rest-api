@@ -18,17 +18,11 @@ use Spryker\Zed\ProductConfigurationsRestApi\Business\Mapper\ProductConfiguratio
  */
 class ProductConfigurationsRestApiBusinessFactory extends AbstractBusinessFactory
 {
-    /**
-     * @return \Spryker\Zed\ProductConfigurationsRestApi\Business\Mapper\ProductConfigurationMapperInterface
-     */
     public function createProductConfigurationMapper(): ProductConfigurationMapperInterface
     {
         return new ProductConfigurationMapper($this->createItemComparator());
     }
 
-    /**
-     * @return \Spryker\Zed\ProductConfigurationsRestApi\Business\Comparator\ItemComparatorInterface
-     */
     public function createItemComparator(): ItemComparatorInterface
     {
         return new ItemComparator($this->getConfig());

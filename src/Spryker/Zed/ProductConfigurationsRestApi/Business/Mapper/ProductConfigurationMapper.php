@@ -18,20 +18,11 @@ class ProductConfigurationMapper implements ProductConfigurationMapperInterface
      */
     protected $itemComparator;
 
-    /**
-     * @param \Spryker\Zed\ProductConfigurationsRestApi\Business\Comparator\ItemComparatorInterface $itemComparator
-     */
     public function __construct(ItemComparatorInterface $itemComparator)
     {
         $this->itemComparator = $itemComparator;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CartItemRequestTransfer $cartItemRequestTransfer
-     * @param \Generated\Shared\Transfer\PersistentCartChangeTransfer $persistentCartChangeTransfer
-     *
-     * @return \Generated\Shared\Transfer\PersistentCartChangeTransfer
-     */
     public function mapCartItemRequestTransferToPersistentCartChangeTransfer(
         CartItemRequestTransfer $cartItemRequestTransfer,
         PersistentCartChangeTransfer $persistentCartChangeTransfer

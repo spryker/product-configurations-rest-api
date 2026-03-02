@@ -22,19 +22,11 @@ class ProductConfigurationProductConcreteExpander implements ProductConfiguratio
      */
     protected ProductConfigurationsRestApiToProductConfigurationStorageClientInterface $productConfigurationStorageClient;
 
-    /**
-     * @param \Spryker\Glue\ProductConfigurationsRestApi\Dependency\Client\ProductConfigurationsRestApiToProductConfigurationStorageClientInterface $productConfigurationStorageClient
-     */
     public function __construct(ProductConfigurationsRestApiToProductConfigurationStorageClientInterface $productConfigurationStorageClient)
     {
         $this->productConfigurationStorageClient = $productConfigurationStorageClient;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ConcreteProductsRestAttributesTransfer $concreteProductsRestAttributesTransfer
-     *
-     * @return \Generated\Shared\Transfer\ConcreteProductsRestAttributesTransfer
-     */
     public function expandWithProductConfigurationInstance(
         ConcreteProductsRestAttributesTransfer $concreteProductsRestAttributesTransfer
     ): ConcreteProductsRestAttributesTransfer {
@@ -54,11 +46,6 @@ class ProductConfigurationProductConcreteExpander implements ProductConfiguratio
         );
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ConcreteProductsRestAttributesTransfer $concreteProductsRestAttributesTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductConfigurationInstanceTransfer|null
-     */
     protected function findProductConfigurationInstance(
         ConcreteProductsRestAttributesTransfer $concreteProductsRestAttributesTransfer
     ): ?ProductConfigurationInstanceTransfer {
@@ -73,11 +60,6 @@ class ProductConfigurationProductConcreteExpander implements ProductConfiguratio
             ->current();
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ConcreteProductsRestAttributesTransfer $concreteProductsRestAttributesTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductConfigurationInstanceCollectionTransfer
-     */
     protected function getProductConfigurationInstanceCollection(
         ConcreteProductsRestAttributesTransfer $concreteProductsRestAttributesTransfer
     ): ProductConfigurationInstanceCollectionTransfer {

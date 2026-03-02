@@ -12,11 +12,5 @@ use Generated\Shared\Transfer\ItemTransfer;
 
 interface ItemComparatorInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ItemTransfer $itemTransfer
-     * @param \Generated\Shared\Transfer\CartItemRequestTransfer $cartItemRequestTransfer
-     *
-     * @return bool
-     */
     public function isSameItem(ItemTransfer $itemTransfer, CartItemRequestTransfer $cartItemRequestTransfer): bool;
 }

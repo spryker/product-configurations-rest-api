@@ -12,12 +12,6 @@ use Generated\Shared\Transfer\RestCartItemsAttributesTransfer;
 
 interface ProductConfigurationCartItemExpanderInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\CartItemRequestTransfer $cartItemRequestTransfer
-     * @param \Generated\Shared\Transfer\RestCartItemsAttributesTransfer $restCartItemsAttributesTransfer
-     *
-     * @return \Generated\Shared\Transfer\CartItemRequestTransfer
-     */
     public function expandWithProductConfigurationInstance(
         CartItemRequestTransfer $cartItemRequestTransfer,
         RestCartItemsAttributesTransfer $restCartItemsAttributesTransfer

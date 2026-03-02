@@ -31,11 +31,6 @@ class ProductConfigurationsRestApiDependencyProvider extends AbstractBundleDepen
      */
     public const PLUGINS_REST_PRODUCT_CONFIGURATION_PRICE_MAPPER = 'PLUGINS_REST_PRODUCT_CONFIGURATION_PRICE_MAPPER';
 
-    /**
-     * @param \Spryker\Glue\Kernel\Container $container
-     *
-     * @return \Spryker\Glue\Kernel\Container
-     */
     public function provideDependencies(Container $container): Container
     {
         $container = parent::provideDependencies($container);
@@ -46,11 +41,6 @@ class ProductConfigurationsRestApiDependencyProvider extends AbstractBundleDepen
         return $container;
     }
 
-    /**
-     * @param \Spryker\Glue\Kernel\Container $container
-     *
-     * @return \Spryker\Glue\Kernel\Container
-     */
     protected function addProductConfigurationStorageClient(Container $container): Container
     {
         $container->set(static::CLIENT_PRODUCT_CONFIGURATION_STORAGE, function (Container $container) {
@@ -62,11 +52,6 @@ class ProductConfigurationsRestApiDependencyProvider extends AbstractBundleDepen
         return $container;
     }
 
-    /**
-     * @param \Spryker\Glue\Kernel\Container $container
-     *
-     * @return \Spryker\Glue\Kernel\Container
-     */
     protected function addProductConfigurationMapperPlugins(Container $container): Container
     {
         $container->set(static::PLUGINS_PRODUCT_CONFIGURATION_PRICE_MAPPER, function () {
@@ -76,11 +61,6 @@ class ProductConfigurationsRestApiDependencyProvider extends AbstractBundleDepen
         return $container;
     }
 
-    /**
-     * @param \Spryker\Glue\Kernel\Container $container
-     *
-     * @return \Spryker\Glue\Kernel\Container
-     */
     protected function addRestProductConfigurationPriceMapperPlugins(Container $container): Container
     {
         $container->set(static::PLUGINS_REST_PRODUCT_CONFIGURATION_PRICE_MAPPER, function () {

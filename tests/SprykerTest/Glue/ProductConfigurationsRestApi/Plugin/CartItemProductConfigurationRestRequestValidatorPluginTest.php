@@ -63,9 +63,6 @@ class CartItemProductConfigurationRestRequestValidatorPluginTest extends Unit
      */
     protected $cartItemProductConfigurationRestRequestValidatorPlugin;
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();
@@ -73,9 +70,6 @@ class CartItemProductConfigurationRestRequestValidatorPluginTest extends Unit
         $this->cartItemProductConfigurationRestRequestValidatorPlugin = new CartItemProductConfigurationRestRequestValidatorPlugin();
     }
 
-    /**
-     * @return void
-     */
     public function testValidateWillReturnNullWhenRequestedResourceIsNotInValidationList(): void
     {
         // Arrange
@@ -93,9 +87,6 @@ class CartItemProductConfigurationRestRequestValidatorPluginTest extends Unit
         $this->assertNull($restErrorCollectionTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testValidateWillReturnNullWhenResourceAttributeDoesNotHaveProductConfiguration(): void
     {
         // Arrange
@@ -114,9 +105,6 @@ class CartItemProductConfigurationRestRequestValidatorPluginTest extends Unit
         $this->assertNull($restErrorCollectionTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testValidateWillReturnNullWhenItemHaveDefaultProductConfigurationWithSameKey(): void
     {
         // Arrange
@@ -153,9 +141,6 @@ class CartItemProductConfigurationRestRequestValidatorPluginTest extends Unit
         $this->assertNull($restErrorCollectionTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testValidateReturnsUnprocessableEntityWhenItemDoesNotHaveDefaultProductConfiguration(): void
     {
         // Arrange
@@ -193,9 +178,6 @@ class CartItemProductConfigurationRestRequestValidatorPluginTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testValidateReturnsUnprocessableEntityWhenItemDoesNotHaveProductConfigurationWithGivenConfigurationKey(): void
     {
         // Arrange

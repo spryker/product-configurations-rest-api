@@ -68,12 +68,6 @@ class ProductConfigurationInstancePriceMapper implements ProductConfigurationIns
         return $restProductConfigurationPriceAttributesTransfers;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\RestProductConfigurationPriceAttributesTransfer $restProductConfigurationPriceAttributesTransfer
-     * @param \Generated\Shared\Transfer\PriceProductTransfer $priceProductTransfer
-     *
-     * @return \Generated\Shared\Transfer\PriceProductTransfer
-     */
     protected function mapRestProductConfigurationPriceAttributesTransferToPriceProductTransfer(
         RestProductConfigurationPriceAttributesTransfer $restProductConfigurationPriceAttributesTransfer,
         PriceProductTransfer $priceProductTransfer
@@ -89,12 +83,6 @@ class ProductConfigurationInstancePriceMapper implements ProductConfigurationIns
             ->setMoneyValue($moneyValueTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\PriceProductTransfer $priceProductTransfer
-     * @param \Generated\Shared\Transfer\RestProductConfigurationPriceAttributesTransfer $restProductConfigurationPriceAttributesTransfer
-     *
-     * @return \Generated\Shared\Transfer\RestProductConfigurationPriceAttributesTransfer
-     */
     protected function mapPriceProductTransferToRestProductConfigurationPriceAttributesTransfer(
         PriceProductTransfer $priceProductTransfer,
         RestProductConfigurationPriceAttributesTransfer $restProductConfigurationPriceAttributesTransfer

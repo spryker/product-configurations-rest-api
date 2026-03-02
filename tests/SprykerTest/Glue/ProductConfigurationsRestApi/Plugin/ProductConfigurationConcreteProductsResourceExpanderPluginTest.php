@@ -41,9 +41,6 @@ class ProductConfigurationConcreteProductsResourceExpanderPluginTest extends Uni
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testExpandWillExpandConcreteProductsResourceWithProductConfiguration(): void
     {
         // Arrange
@@ -83,9 +80,6 @@ class ProductConfigurationConcreteProductsResourceExpanderPluginTest extends Uni
         );
     }
 
-    /**
-     * @return void
-     */
     public function testExpandWillNotExpandConcreteProductsResourceWithoutProductConfiguration(): void
     {
         // Arrange

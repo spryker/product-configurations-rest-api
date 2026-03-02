@@ -24,25 +24,16 @@ use Spryker\Glue\ProductConfigurationsRestApi\Processor\Validator\CartItemProduc
 
 class ProductConfigurationsRestApiFactory extends AbstractFactory
 {
-    /**
-     * @return \Spryker\Glue\ProductConfigurationsRestApi\Processor\Expander\ProductConfigurationProductConcreteExpanderInterface
-     */
     public function createProductConfigurationProductConcreteExpander(): ProductConfigurationProductConcreteExpanderInterface
     {
         return new ProductConfigurationProductConcreteExpander($this->getProductConfigurationStorageClient());
     }
 
-    /**
-     * @return \Spryker\Glue\ProductConfigurationsRestApi\Processor\Mapper\ProductConfigurationRestOrderAttributesMapperInterface
-     */
     public function createProductConfigurationRestOrderAttributesMapper(): ProductConfigurationRestOrderAttributesMapperInterface
     {
         return new ProductConfigurationRestOrderAttributesMapper();
     }
 
-    /**
-     * @return \Spryker\Glue\ProductConfigurationsRestApi\Processor\Expander\ProductConfigurationCartItemExpanderInterface
-     */
     public function createProductConfigurationCartItemExpander(): ProductConfigurationCartItemExpanderInterface
     {
         return new ProductConfigurationCartItemExpander(
@@ -51,9 +42,6 @@ class ProductConfigurationsRestApiFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \Spryker\Glue\ProductConfigurationsRestApi\Processor\Mapper\ProductConfigurationInstanceMapperInterface
-     */
     public function createProductConfigurationInstanceMapper(): ProductConfigurationInstanceMapperInterface
     {
         return new ProductConfigurationInstanceMapper(
@@ -63,17 +51,11 @@ class ProductConfigurationsRestApiFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \Spryker\Glue\ProductConfigurationsRestApi\Processor\Mapper\ProductConfigurationInstancePriceMapperInterface
-     */
     public function createProductConfigurationInstancePriceMapper(): ProductConfigurationInstancePriceMapperInterface
     {
         return new ProductConfigurationInstancePriceMapper();
     }
 
-    /**
-     * @return \Spryker\Glue\ProductConfigurationsRestApi\Processor\Validator\CartItemProductConfigurationRestRequestValidatorInterface
-     */
     public function createCartItemProductConfigurationRestRequestValidator(): CartItemProductConfigurationRestRequestValidatorInterface
     {
         return new CartItemProductConfigurationRestRequestValidator(
@@ -81,9 +63,6 @@ class ProductConfigurationsRestApiFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \Spryker\Glue\ProductConfigurationsRestApi\Dependency\Client\ProductConfigurationsRestApiToProductConfigurationStorageClientInterface
-     */
     public function getProductConfigurationStorageClient(): ProductConfigurationsRestApiToProductConfigurationStorageClientInterface
     {
         return $this->getProvidedDependency(ProductConfigurationsRestApiDependencyProvider::CLIENT_PRODUCT_CONFIGURATION_STORAGE);

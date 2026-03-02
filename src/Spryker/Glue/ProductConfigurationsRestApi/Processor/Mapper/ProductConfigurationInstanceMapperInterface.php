@@ -14,23 +14,11 @@ use Generated\Shared\Transfer\RestItemsAttributesTransfer;
 
 interface ProductConfigurationInstanceMapperInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\RestCartItemProductConfigurationInstanceAttributesTransfer $restCartItemProductConfigurationInstanceAttributesTransfer
-     * @param \Generated\Shared\Transfer\ProductConfigurationInstanceTransfer $productConfigurationInstanceTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductConfigurationInstanceTransfer
-     */
     public function mapRestCartItemProductConfigurationToProductConfigurationInstance(
         RestCartItemProductConfigurationInstanceAttributesTransfer $restCartItemProductConfigurationInstanceAttributesTransfer,
         ProductConfigurationInstanceTransfer $productConfigurationInstanceTransfer
     ): ProductConfigurationInstanceTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\ItemTransfer $itemTransfer
-     * @param \Generated\Shared\Transfer\RestItemsAttributesTransfer $restItemsAttributesTransfer
-     *
-     * @return \Generated\Shared\Transfer\RestItemsAttributesTransfer
-     */
     public function mapItemTransferToRestItemsAttributesTransfer(
         ItemTransfer $itemTransfer,
         RestItemsAttributesTransfer $restItemsAttributesTransfer
