@@ -3,7 +3,7 @@
 
     <transfer name="ConcreteProductsRestAttributes">
         <property name="sku" type="string" description="The Stock Keeping Unit, a unique identifier for a concrete product."/>
-        <property name="productConfigurationInstance" type="RestProductConfigurationInstanceAttributes" description="An instance of a configured product."/>
+        <property name="productConfigurationInstance" type="RestProductConfigurationInstanceAttributes" description="Configuration instance data when the product is configurable."/>
     </transfer>
 
     <transfer name="RestProductConfigurationInstanceAttributes">
