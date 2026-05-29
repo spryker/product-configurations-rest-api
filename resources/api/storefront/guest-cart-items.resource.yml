@@ -1,0 +1,11 @@
+resource:
+    name: GuestCartItems
+    shortName: guest-cart-items
+
+    properties:
+        productConfigurationInstance:
+            type: mixed
+            writable: true
+            readable: true
+            required: false
+            description: 'Product configuration instance data'
