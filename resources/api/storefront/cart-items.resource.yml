@@ -6,6 +6,7 @@ resource:
         productConfigurationInstance:
             type: mixed
             writable: true
+            writableOn: ['Post']
             readable: true
             required: false
             description: 'Product configuration instance data'
