@@ -5,6 +5,7 @@ resource:
     properties:
         productConfigurationInstance:
             type: mixed
+            allowWhitespace: true
             writable: true
             writableOn: ['Post']
             readable: true
