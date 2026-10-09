@@ -11,3 +11,18 @@ resource:
             readable: true
             required: false
             description: 'Product configuration instance data'
+            openapiContext:
+                example:
+                    configuratorKey: 'DATE_TIME_CONFIGURATOR'
+                    configuration: '{"time_of_day": "4", "date": "09.09.2050"}'
+                    displayData: '{"Preferred time of the day": "Afternoon", "Date": "09.09.2050"}'
+                    isComplete: true
+                    availableQuantity: 4
+                    prices:
+                        - priceTypeName: 'DEFAULT'
+                          netAmount: 23434
+                          grossAmount: 42502
+                          currency:
+                              code: 'EUR'
+                              name: 'Euro'
+                              symbol: '€'
