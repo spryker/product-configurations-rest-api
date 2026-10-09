@@ -18,14 +18,8 @@ use Spryker\Glue\ProductConfigurationsRestApi\Processor\Mapper\ProductConfigurat
 
 class ProductConfigurationCartItemExpander implements ProductConfigurationCartItemExpanderInterface
 {
-    /**
-     * @var \Spryker\Glue\ProductConfigurationsRestApi\Processor\Mapper\ProductConfigurationInstanceMapperInterface
-     */
     protected ProductConfigurationInstanceMapperInterface $productConfigurationInstanceMapper;
 
-    /**
-     * @var \Spryker\Glue\ProductConfigurationsRestApi\Dependency\Client\ProductConfigurationsRestApiToProductConfigurationStorageClientInterface
-     */
     protected ProductConfigurationsRestApiToProductConfigurationStorageClientInterface $productConfigurationStorageClient;
 
     public function __construct(

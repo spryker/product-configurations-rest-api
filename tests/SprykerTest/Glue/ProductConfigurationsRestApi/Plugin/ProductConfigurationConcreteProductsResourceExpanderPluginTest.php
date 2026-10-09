@@ -104,8 +104,6 @@ class ProductConfigurationConcreteProductsResourceExpanderPluginTest extends Uni
     }
 
     /**
-     * @param \Generated\Shared\Transfer\ProductConfigurationInstanceCollectionTransfer $productConfigurationInstanceCollectionTransfer
-     *
      * @return \Spryker\Glue\ProductConfigurationsRestApi\Dependency\Client\ProductConfigurationsRestApiToProductConfigurationStorageClientInterface|\PHPUnit\Framework\MockObject\MockObject
      */
     protected function createProductConfigurationStorageClientMock(

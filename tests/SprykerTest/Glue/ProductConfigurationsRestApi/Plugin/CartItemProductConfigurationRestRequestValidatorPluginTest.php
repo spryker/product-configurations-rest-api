@@ -226,9 +226,6 @@ class CartItemProductConfigurationRestRequestValidatorPluginTest extends Unit
     }
 
     /**
-     * @param string $resourceType
-     * @param \Generated\Shared\Transfer\RestCartItemsAttributesTransfer|null $restCartItemsAttributesTransfer
-     *
      * @return \PHPUnit\Framework\MockObject\MockObject|\Spryker\Glue\GlueApplication\Rest\JsonApi\RestResourceInterface
      */
     protected function createRestResourceMock(
@@ -254,8 +251,6 @@ class CartItemProductConfigurationRestRequestValidatorPluginTest extends Unit
     }
 
     /**
-     * @param \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResourceInterface $restResource
-     *
      * @return \PHPUnit\Framework\MockObject\MockObject|\Spryker\Glue\GlueApplication\Rest\Request\Data\RestRequestInterface
      */
     protected function createRestRequestMock(RestResourceInterface $restResource): RestRequestInterface
@@ -267,8 +262,6 @@ class CartItemProductConfigurationRestRequestValidatorPluginTest extends Unit
     }
 
     /**
-     * @param \Generated\Shared\Transfer\ProductConfigurationInstanceCollectionTransfer $productConfigurationInstanceCollectionTransfer
-     *
      * @return \Spryker\Glue\ProductConfigurationsRestApi\Dependency\Client\ProductConfigurationsRestApiToProductConfigurationStorageClientInterface|\PHPUnit\Framework\MockObject\MockObject
      */
     protected function createProductConfigurationStorageClientMock(

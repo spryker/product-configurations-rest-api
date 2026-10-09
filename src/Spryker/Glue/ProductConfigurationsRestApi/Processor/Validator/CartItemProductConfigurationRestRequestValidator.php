@@ -52,9 +52,6 @@ class CartItemProductConfigurationRestRequestValidator implements CartItemProduc
         Request::METHOD_POST,
     ];
 
-    /**
-     * @var \Spryker\Glue\ProductConfigurationsRestApi\Dependency\Client\ProductConfigurationsRestApiToProductConfigurationStorageClientInterface
-     */
     protected ProductConfigurationsRestApiToProductConfigurationStorageClientInterface $productConfigurationStorageClient;
 
     public function __construct(ProductConfigurationsRestApiToProductConfigurationStorageClientInterface $productConfigurationStorageClient)

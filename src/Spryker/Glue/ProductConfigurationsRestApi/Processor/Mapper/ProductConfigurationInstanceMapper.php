@@ -31,7 +31,6 @@ class ProductConfigurationInstanceMapper implements ProductConfigurationInstance
     protected $restProductConfigurationPriceMapperPlugins;
 
     /**
-     * @param \Spryker\Glue\ProductConfigurationsRestApi\Processor\Mapper\ProductConfigurationInstancePriceMapperInterface $productConfigurationInstancePriceMapper
      * @param array<\Spryker\Glue\ProductConfigurationsRestApiExtension\Dependency\Plugin\ProductConfigurationPriceMapperPluginInterface> $productConfigurationPriceMapperPlugins
      * @param array<\Spryker\Glue\ProductConfigurationsRestApiExtension\Dependency\Plugin\RestProductConfigurationPriceMapperPluginInterface> $restProductConfigurationPriceMapperPlugins
      */
@@ -100,9 +99,6 @@ class ProductConfigurationInstanceMapper implements ProductConfigurationInstance
 
     /**
      * @param array<\Generated\Shared\Transfer\RestProductConfigurationPriceAttributesTransfer> $restProductConfigurationPriceAttributesTransfers
-     * @param \Generated\Shared\Transfer\ProductConfigurationInstanceTransfer $productConfigurationInstanceTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductConfigurationInstanceTransfer
      */
     protected function executeProductConfigurationPriceMapperPlugins(
         array $restProductConfigurationPriceAttributesTransfers,
@@ -119,7 +115,6 @@ class ProductConfigurationInstanceMapper implements ProductConfigurationInstance
     }
 
     /**
-     * @param \Generated\Shared\Transfer\ProductConfigurationInstanceTransfer $productConfigurationInstanceTransfer
      * @param array<\Generated\Shared\Transfer\RestProductConfigurationPriceAttributesTransfer> $restProductConfigurationPriceAttributesTransfers
      *
      * @return array<\Generated\Shared\Transfer\RestProductConfigurationPriceAttributesTransfer>

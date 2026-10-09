@@ -17,9 +17,6 @@ use Spryker\Glue\ProductConfigurationsRestApi\Dependency\Client\ProductConfigura
 
 class ProductConfigurationProductConcreteExpander implements ProductConfigurationProductConcreteExpanderInterface
 {
-    /**
-     * @var \Spryker\Glue\ProductConfigurationsRestApi\Dependency\Client\ProductConfigurationsRestApiToProductConfigurationStorageClientInterface
-     */
     protected ProductConfigurationsRestApiToProductConfigurationStorageClientInterface $productConfigurationStorageClient;
 
     public function __construct(ProductConfigurationsRestApiToProductConfigurationStorageClientInterface $productConfigurationStorageClient)

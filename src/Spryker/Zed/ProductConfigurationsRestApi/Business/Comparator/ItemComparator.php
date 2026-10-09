@@ -25,12 +25,7 @@ class ItemComparator implements ItemComparatorInterface
     }
 
     /**
-     * @param \Generated\Shared\Transfer\ItemTransfer $itemTransfer
-     * @param \Generated\Shared\Transfer\CartItemRequestTransfer $cartItemRequestTransfer
-     *
      * @throws \Spryker\Zed\ProductConfigurationsRestApi\Business\Exception\TransferPropertyNotFoundException
-     *
-     * @return bool
      */
     public function isSameItem(ItemTransfer $itemTransfer, CartItemRequestTransfer $cartItemRequestTransfer): bool
     {
