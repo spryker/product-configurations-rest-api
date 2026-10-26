@@ -18,6 +18,9 @@
     },
     "require-dev": {
         "spryker/code-sniffer": "*",
+        "spryker/product-configuration": "*",
+        "spryker/storage": "*",
+        "spryker/store": "*",
         "spryker/testify": "*"
     },
     "suggest": {
@@ -27,7 +30,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Spryker\\": "src/Spryker/"
+            "Spryker\\": "src/Spryker/",
+            "SprykerTest\\Glue\\ProductConfigurationsRestApi\\Helper\\": "tests/SprykerTest/Glue/ProductConfigurationsRestApi/_support/Helper/"
         }
     },
     "autoload-dev": {
